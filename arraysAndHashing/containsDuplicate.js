@@ -1,4 +1,5 @@
 
+//easy
 
 // intuition is -
 /* for each element in the list - check to see if it in the dict

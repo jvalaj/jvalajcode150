@@ -1,3 +1,5 @@
+//medium
+
 let word = "pants"
 
 let newWord = word.split('').sort().join('')
