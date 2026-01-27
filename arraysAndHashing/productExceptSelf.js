@@ -1,3 +1,4 @@
+//medium
 
 /*intution is think of it like this firwst go left to right
 
