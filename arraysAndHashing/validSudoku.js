@@ -1,7 +1,5 @@
 //medium
 
-const newSet = new Set(nums);
-
 var isValidSudoku = function (board) {  
   const rows = Array.from({ length: 9 }, () => new Set());
   const cols = Array.from({ length: 9 }, () => new Set());
@@ -30,3 +28,32 @@ var isValidSudoku = function (board) {
 
   return true;
 };
+
+/*
+
+
+the solution i have writtne above isthere in js but is far more comlex than the one in python.
+here is the python dsolution
+
+def validSudoku(board):
+
+  rows = collections.defaultdict(set) //here we are saying a collection of sets, like {{0:},{},{}}
+  cols = collections.defaultdict(set)
+  box = collections.defaultdict(set)
+
+  for r in range(0,9):
+    for c in range(0,9):
+
+      if board[r][c] == ".":
+        continue
+
+      if (board[r][c] in rows[r] or 
+          board[r][c] in cols[c] or
+          board[r][c] in box[(r//3, c//3)]): // we are doing this to locate which box like 0 1 2 in rows and cols
+          return False
+      rows[r].add(board[r][c])
+      cols[c].add(board[r][c])
+      box[(r//3, c//3)].add(board[r][c])
+  return True
+
+*/
